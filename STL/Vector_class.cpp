@@ -11,22 +11,27 @@ mutators: push_back(), pop_back(), insert(), erase(), clear(), assign(), swap()
 int main(){
 
     std::vector<std::string> vect;
+    std::vector<std::string> vect2;
 
-    vect.front() = "sangi";
-    vect.at(0) = "sangi";
-    vect[1] = "santhu";
-    vect.back() = "santhu";
+    // vect.front() = "sangi";
+    vect.push_back("sangi");
+    vect2.assign(vect.begin(), vect.end());
+    std::cout << vect2.front() << std::endl;
+    
+    // vect.at(0) = "sangi";
+    // vect[1] = "santhu";
+    // vect.back() = "santhu";
 
-    std::cout << vect.size() << std::endl;
-    std::cout << vect.capacity() << std::endl;
-    std::cout << vect.max_size() << std::endl;
-    std::cout << vect.empty() << std::endl;
-    vect.resize(6);
-    std::cout << vect.size() << std::endl;
-    vect.reserve(10);
-    std::cout << vect.size() << std::endl;
-    vect.shrink_to_fit();
-    std::cout << vect.size() << std::endl;
+    // std::cout << vect.size() << std::endl;
+    // std::cout << vect.capacity() << std::endl;
+    // std::cout << vect.max_size() << std::endl;
+    // std::cout << vect.empty() << std::endl;
+    // vect.resize(6);
+    // std::cout << vect.size() << std::endl;
+    // vect.reserve(10);
+    // std::cout << vect.size() << std::endl;
+    // vect.shrink_to_fit();
+    // std::cout << vect.size() << std::endl;
 
 
     return 0;
